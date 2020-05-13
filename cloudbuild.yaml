@@ -1,7 +1,7 @@
 steps:
   - id: "Rodando testes"
     name: "gcr.io/cloud-builders/go"
-    args: ["test", "/workspace/src/sum/*.go"]
+    args: ["test", "./src/sum/*.go"]
 
 images:
   - "gcr.io/$PROJECT_ID/go-sum:latest"
