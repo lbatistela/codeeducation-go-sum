@@ -1,7 +1,7 @@
 steps:
   - id: "Rodando testes"
     name: "gcr.io/cloud-builders/go"
-    env: ["GOPATH=/workspace"]
+    env: ["GOPATH=."]
     args: ["test", "sum/*.go"]
 
 images:
