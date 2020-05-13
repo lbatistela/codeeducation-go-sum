@@ -1,8 +1,11 @@
 steps:
+  - id: "Rodando go mod init"
+    name: "mirror.gcr.io/library/golang"
+    args: ["go", "mod", "init", "src/sum"]
+
   - id: "Rodando testes"
-    name: "gcr.io/cloud-builders/go"
-    env: ["GOPATH=src/sum"]
-    args: ["test"]
+    name: "mirror.gcr.io/library/golang"
+    args: ["go", "test"]
 
 images:
   - "gcr.io/$PROJECT_ID/go-sum:latest"
